@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mayya Aprosina — Product Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5F1EC;
+    --warm-white: #FAF8F5;
+    --charcoal: #1C1C1C;
+    --mid: #6B6560;
+    --light: #B8B0A8;
+    --accent: #8B7355;
+    --line: #E2DDD8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--charcoal);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 64px 48px;
+    background: var(--warm-white);
+  }
+
+  /* ── HEADER ─────────────────────────────────── */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--charcoal);
+    margin-bottom: 48px;
+    gap: 24px;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+  }
+
+  .header-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid var(--line);
+    margin-bottom: 4px;
+  }
+
+  .header-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    color: var(--charcoal);
+  }
+
+  .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--accent);
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+  }
+
+  .contact {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 6px;
+  }
+
+  .contact a, .contact span {
+    color: var(--mid);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    transition: color 0.2s;
+  }
+
+  .contact a:hover { color: var(--charcoal); }
+
+  /* ── PROFILE ─────────────────────────────────── */
+  .profile {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--mid);
+    line-height: 1.75;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ── LAYOUT ──────────────────────────────────── */
+  .grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 0 48px;
+  }
+
+  /* ── SIDEBAR ─────────────────────────────────── */
+  .sidebar {
+    padding-right: 48px;
+    border-right: 1px solid var(--line);
+  }
+
+  .sidebar-section {
+    margin-bottom: 36px;
+  }
+
+  .sidebar-section:last-child { margin-bottom: 0; }
+
+  .section-label {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 16px;
+  }
+
+  /* Photo */
+  .photo-wrap {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .photo-circle {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+
+  .photo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  /* Skills */
+  .skill-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .skill-list li {
+    font-size: 12px;
+    color: var(--mid);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .skill-list li::before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  /* Tags */
+  .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .tag {
+    font-size: 10px;
+    color: var(--mid);
+    border: 1px solid var(--line);
+    padding: 3px 8px;
+    border-radius: 2px;
+    letter-spacing: 0.3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .tag img {
+    width: 13px;
+    height: 13px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .skill-list li img {
+    width: 13px;
+    height: 13px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  /* Languages */
+  .lang-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .lang-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  .lang-name { color: var(--charcoal); }
+
+  .lang-level {
+    font-size: 10px;
+    color: var(--light);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* Education */
+  .edu-item {
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .edu-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .edu-school {
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--charcoal);
+    line-height: 1.3;
+  }
+
+  .edu-degree {
+    font-size: 11px;
+    color: var(--mid);
+    margin-top: 2px;
+  }
+
+  .edu-year {
+    font-size: 10px;
+    color: var(--light);
+    margin-top: 2px;
+  }
+
+  /* ── MAIN / EXPERIENCE ───────────────────────── */
+  .main { }
+
+  .exp-item {
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--line);
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+
+  .exp-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .exp-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .exp-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    margin-bottom: 6px;
+  }
+
+  .exp-company {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .exp-period {
+    font-size: 11px;
+    color: var(--light);
+    letter-spacing: 0.3px;
+  }
+
+  .exp-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 3px;
+    line-height: 1.2;
+  }
+
+  .exp-location {
+    font-size: 11px;
+    color: var(--light);
+    margin-bottom: 12px;
+  }
+
+  .exp-desc {
+    font-size: 12.5px;
+    color: var(--mid);
+    line-height: 1.75;
+    margin-bottom: 10px;
+  }
+
+  .exp-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .exp-list li {
+    font-size: 12px;
+    color: var(--mid);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .exp-list li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--light);
+  }
+
+  /* ── TOOLBAR ─────────────────────────────────── */
+  .toolbar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 100;
+    background: var(--warm-white);
+    border: 1px solid var(--line);
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+  }
+
+  .lang-switch { display: flex; align-items: center; gap: 4px; }
+
+  .lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--light);
+    padding: 2px 5px;
+    border-radius: 2px;
+    transition: color 0.2s;
+  }
+
+  .lang-btn.active { color: var(--charcoal); }
+  .lang-btn:hover { color: var(--charcoal); }
+
+  .lang-sep { font-size: 10px; color: var(--line); }
+
+  .toolbar-divider { width: 1px; height: 16px; background: var(--line); }
+
+  .pdf-btn {
+    background: var(--charcoal);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    padding: 5px 12px;
+    border-radius: 2px;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .pdf-btn:hover { background: var(--accent); }
+
+  /* ── PRINT ───────────────────────────────────── */
+  @media print {
+    body { background: white; font-size: 11px; }
+    .page { padding: 32px; max-width: 100%; box-shadow: none; }
+    .exp-item { opacity: 1 !important; transform: none !important; }
+    .name { font-size: 48px; }
+    .toolbar { display: none; }
+  }
+
+  @page { size: A4; margin: 0; }
+
+  /* ── RESPONSIVE ──────────────────────────────── */
+  @media (max-width: 700px) {
+    .grid { grid-template-columns: 1fr; }
+    .sidebar { border-right: none; border-bottom: 1px solid var(--line); padding-right: 0; padding-bottom: 32px; margin-bottom: 32px; }
+    .page { padding: 32px 24px; }
+    header { grid-template-columns: 1fr; }
+    .contact { text-align: left; margin-top: 16px; }
+    .name { font-size: 42px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOOLBAR -->
+<div class="toolbar">
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="setLang('en')">EN</button>
+    <span class="lang-sep">/</span>
+    <button class="lang-btn" onclick="setLang('nl')">NL</button>
+  </div>
+  <div class="toolbar-divider"></div>
+  <button class="pdf-btn" onclick="window.print()">↓ PDF</button>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-left">
+      <div class="header-photo">
+        <img src="451417091_1699875604172115_7399831627881872384_n.jpg" alt="Mayya Aprosina">
+      </div>
+      <div>
+        <div class="name">Mayya Aprosina</div>
+        <div class="title"><span class="t" data-en="Product Designer" data-nl="Product Designer">Product Designer</span></div>
+      </div>
+    </div>
+    <div class="contact">
+      <a href="tel:+32469123572">+32 469 12 35 72</a>
+      <a href="mailto:Densteysi@gmail.com">Densteysi@gmail.com</a>
+      <span>Bornem, Belgium</span>
+      <a href="https://linkedin.com/in/mayyaaprosina" target="_blank">linkedin.com/in/mayyaaprosina</a>
+      <a href="https://behance.net/mayyadensteysi" target="_blank">portfolio/mayyadensteysi</a>
+    </div>
+  </header>
+
+  <!-- PROFILE -->
+  <p class="profile">
+    <span class="t"
+      data-en="Product Designer with entrepreneurial product ownership experience, bridging the gap between technical teams and end users to deliver customer-centric digital solutions. With 5+ years leading cross-functional teams in digitalisation projects, I combine strategic product thinking with hands-on implementation expertise. As an entrepreneur, I've driven complete product lifecycles from vision to launch, translating customer needs into concrete roadmaps and managing development teams to deliver robust digital products."
+      data-nl="Product Designer met ondernemingservaring in productbeheer, die de kloof overbrugt tussen technische teams en eindgebruikers om klantgerichte digitale oplossingen te leveren. Met meer dan 5 jaar leiding geven aan cross-functionele teams in digitaliseringsprojecten, combineer ik strategisch productdenken met praktische implementatie-expertise. Als ondernemer heb ik complete productlevenscycli aangestuurd van visie tot lancering, waarbij ik klantbehoeften vertaalde naar concrete roadmaps en ontwikkelteams aanstuurde om robuuste digitale producten te leveren."
+    >Product Designer with entrepreneurial product ownership experience, bridging the gap between technical teams and end users to deliver customer-centric digital solutions. With 5+ years leading cross-functional teams in digitalisation projects, I combine strategic product thinking with hands-on implementation expertise. As an entrepreneur, I've driven complete product lifecycles from vision to launch, translating customer needs into concrete roadmaps and managing development teams to deliver robust digital products.</span>
+  </p>
+
+  <div class="grid">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <div class="sidebar-section">
+        <div class="section-label"><span class="t" data-en="Skills" data-nl="Vaardigheden">Skills</span></div>
+        <ul class="skill-list">
+          <li><img src="tools/asana.svg" alt=""><span class="t" data-en="Project Management" data-nl="Projectbeheer">Project Management</span></li>
+          <li><img src="tools/dovetail.svg" alt=""><span class="t" data-en="UX &amp; Research" data-nl="UX &amp; Onderzoek">UX &amp; Research</span></li>
+          <li><img src="tools/miro.svg" alt=""><span class="t" data-en="Service Design" data-nl="Service Design">Service Design</span></li>
+          <li><img src="tools/amplitude.svg" alt=""><span class="t" data-en="Product Discovery" data-nl="Productonderzoek">Product Discovery</span></li>
+          <li><img src="tools/figma.svg" alt=""><span class="t" data-en="Prototyping" data-nl="Prototyping">Prototyping</span></li>
+          <li><img src="tools/canva.svg" alt=""><span class="t" data-en="Branding" data-nl="Branding">Branding</span></li>
+          <li><img src="tools/hotjar.svg" alt=""><span class="t" data-en="Usability Testing" data-nl="Bruikbaarheidstesten">Usability Testing</span></li>
+          <li><img src="tools/linear.svg" alt=""><span class="t" data-en="Roadmapping" data-nl="Roadmapping">Roadmapping</span></li>
+          <li><img src="tools/figma.svg" alt=""><span class="t" data-en="UI Design" data-nl="UI Design">UI Design</span></li>
+          <li><img src="tools/html5.svg" alt="">HTML / <img src="tools/css3.svg" alt="">CSS</li>
+          <li><img src="tools/notion.svg" alt=""><span class="t" data-en="System Mapping" data-nl="Systeemkaart">System Mapping</span></li>
+          <li><img src="tools/nuxtjs.svg" alt="">Nuxt / <img src="tools/vuejs.svg" alt="">Vue</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="section-label"><span class="t" data-en="Software" data-nl="Software">Software</span></div>
+        <div class="tag-cloud">
+          <span class="tag"><img src="tools/figma.svg" alt="">Figma</span>
+          <span class="tag"><img src="tools/adobeillustrator.svg" alt="">Illustrator</span>
+          <span class="tag"><img src="tools/photoshop.svg" alt="">Photoshop</span>
+          <span class="tag"><img src="tools/ae.svg" alt="">After Effects</span>
+          <span class="tag"><img src="tools/premierepro.svg" alt="">Premiere Pro</span>
+          <span class="tag"><img src="tools/visualstudio.svg" alt="">Visual Studio</span>
+          <span class="tag"><img src="tools/jira.svg" alt="">Jira</span>
+          <span class="tag"><img src="tools/monday-icon.svg" alt="">Monday.com</span>
+          <span class="tag"><img src="tools/clickup.svg" alt="">ClickUp</span>
+          <span class="tag"><img src="tools/miro.svg" alt="">Miro</span>
+          <span class="tag"><img src="tools/notion.svg" alt="">Notion</span>
+          <span class="tag"><img src="tools/github.svg" alt="" style="filter: brightness(0);">GitHub</span>
+          <span class="tag"><img src="tools/atlassian.svg" alt="">Confluence</span>
+          <span class="tag"><img src="tools/microsoft.svg" alt="">MS Teams</span>
+          <span class="tag"><img src="tools/wordpress.svg" alt="">WordPress</span>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="section-label"><span class="t" data-en="Languages" data-nl="Talen">Languages</span></div>
+        <div class="lang-list">
+          <div class="lang-item">
+            <span class="lang-name"><span class="t" data-en="Russian" data-nl="Russisch">Russian</span></span>
+            <span class="lang-level"><span class="t" data-en="Native" data-nl="Moedertaal">Native</span></span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name"><span class="t" data-en="English" data-nl="Engels">English</span></span>
+            <span class="lang-level"><span class="t" data-en="Fluent" data-nl="Vloeiend">Fluent</span></span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name"><span class="t" data-en="Dutch" data-nl="Nederlands">Dutch</span></span>
+            <span class="lang-level"><span class="t" data-en="Fluent" data-nl="Vloeiend">Fluent</span></span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name"><span class="t" data-en="Spanish" data-nl="Spaans">Spanish</span></span>
+            <span class="lang-level"><span class="t" data-en="Basic" data-nl="Basis">Basic</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="section-label"><span class="t" data-en="Education" data-nl="Opleiding">Education</span></div>
+        <div class="edu-item">
+          <div class="edu-school">CXL Institute</div>
+          <div class="edu-degree"><span class="t" data-en="Minidegree in Brand Marketing" data-nl="Minigraad Merkmarketing">Minidegree in Brand Marketing</span></div>
+          <div class="edu-year">2023</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-school">Zuyd University of Applied Sciences</div>
+          <div class="edu-degree"><span class="t" data-en="Bachelor of Arts and Design" data-nl="Bachelor Kunst en Vormgeving">Bachelor of Arts and Design</span></div>
+          <div class="edu-year">2015 – 2018</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-school">Gnessin Russian Academy of Music</div>
+          <div class="edu-degree"><span class="t" data-en="High School Diploma, Choir Conducting" data-nl="Diploma, Koordirectie">High School Diploma, Choir Conducting</span></div>
+          <div class="edu-year">2012 – 2015</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-school">Stroganov Academy</div>
+          <div class="edu-degree"><span class="t" data-en="Secondary Diploma, Fine Arts" data-nl="Diploma, Beeldende Kunsten">Secondary Diploma, Fine Arts</span></div>
+          <div class="edu-year">2009 – 2012</div>
+        </div>
+      </div>
+
+    </div><!-- /sidebar -->
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <div class="section-label" style="margin-bottom: 24px;"><span class="t" data-en="Experience" data-nl="Ervaring">Experience</span></div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-company">Isabel</div>
+          <div class="exp-period">May 2024 – Aug 2025</div>
+        </div>
+        <div class="exp-role"><span class="t" data-en="Product Designer" data-nl="Product Designer">Product Designer</span></div>
+        <div class="exp-location"><span class="t" data-en="Brussels, Belgium · Full-time" data-nl="Brussel, België · Voltijds">Brussels, Belgium · Full-time</span></div>
+        <p class="exp-desc">Designed and improved user experiences for financial software and multi-banking platforms serving enterprise clients. Worked closely with product managers, analysts and engineering teams to translate complex financial workflows into clear, efficient and user-friendly solutions.</p>
+        <ul class="exp-list">
+          <li>User-centered UX &amp; interaction design</li>
+          <li>Wireframing &amp; prototyping in Figma</li>
+          <li>Translating requirements into user flows &amp; interface logic</li>
+          <li>Design system &amp; component library development</li>
+          <li>Accessibility &amp; responsive standards (WCAG)</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-company">Idalko</div>
+          <div class="exp-period">Jul 2023 – Present</div>
+        </div>
+        <div class="exp-role"><span class="t" data-en="Digital Specialist Partner" data-nl="Digitale Specialist Partner">Digital Specialist Partner</span></div>
+        <div class="exp-location"><span class="t" data-en="Antwerp, Belgium · Part-time" data-nl="Antwerpen, België · Deeltijds">Antwerp, Belgium · Part-time</span></div>
+        <p class="exp-desc">Long-term design and product collaborator supporting Idalko across brand, digital platforms and software solutions. Translated business needs into user flows and designed intuitive user experiences for websites, customer portals and internal tools.</p>
+        <ul class="exp-list">
+          <li>Product-focused UX &amp; interface design</li>
+          <li>Discovery input: research &amp; user pain point analysis</li>
+          <li>Brand identity &amp; visual language development</li>
+          <li>Digital experience design for portals and software</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-company">Concept Booth</div>
+          <div class="exp-period">Dec 2023 – May 2024</div>
+        </div>
+        <div class="exp-role"><span class="t" data-en="Digital Production Manager" data-nl="Digitale Productiemanager">Digital Production Manager</span></div>
+        <div class="exp-location"><span class="t" data-en="Antwerp, Belgium · Full-time" data-nl="Antwerpen, België · Voltijds">Antwerp, Belgium · Full-time</span></div>
+        <p class="exp-desc">Managed end-to-end execution of visual and digital projects, coordinating cross-functional teams to deliver high-quality assets on time. Maintained smooth communication between design, marketing and development units.</p>
+        <ul class="exp-list">
+          <li>Cross-functional coordination &amp; stakeholder alignment</li>
+          <li>Project planning, tracking &amp; delivery</li>
+          <li>Creative direction &amp; brand consistency</li>
+          <li>Oversight of web and digital content workflows</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-company">Exalate</div>
+          <div class="exp-period">Jun 2021 – Dec 2023</div>
+        </div>
+        <div class="exp-role"><span class="t" data-en="UI/UX Designer" data-nl="UI/UX Designer">UI/UX Designer</span></div>
+        <div class="exp-location"><span class="t" data-en="Antwerp, Belgium · Full-time" data-nl="Antwerpen, België · Voltijds">Antwerp, Belgium · Full-time</span></div>
+        <p class="exp-desc">Delivered UX and interface design for an integration platform and marketing ecosystem. Ensured consistency across digital touchpoints and contributed to communicating complex workflows in a clear and accessible way.</p>
+        <ul class="exp-list">
+          <li>Designed UX flows and UI layouts aligned with product requirements</li>
+          <li>Interface components and page structures with accessibility best practices</li>
+          <li>Visual materials and interactive assets for complex integrations</li>
+          <li>Collaborated with product and engineering teams to refine user journeys</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-company">Jones Lang LaSalle · Procter &amp; Gamble</div>
+          <div class="exp-period">Jan 2020 – Dec 2021</div>
+        </div>
+        <div class="exp-role"><span class="t" data-en="Design Specialist" data-nl="Designspecialist">Design Specialist</span></div>
+        <div class="exp-location"><span class="t" data-en="London, United Kingdom · Full-time" data-nl="Londen, Verenigd Koninkrijk · Voltijds">London, United Kingdom · Full-time</span></div>
+        <p class="exp-desc">Regional Services Design Specialist for the P&amp;G account within Integrated Facilities Management. Structured communication workflows, translated operational requirements into clear materials, and unified brand experience across diverse regional clusters.</p>
+        <ul class="exp-list">
+          <li>Communication templates and standardized libraries for cross-site use</li>
+          <li>Brand guidelines alignment for facility environments</li>
+          <li>Executive presentation materials and data-informed visual communication</li>
+          <li>Digital and print communication materials, including videos</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-company">Apla.io</div>
+          <div class="exp-period">May 2017 – Dec 2019</div>
+        </div>
+        <div class="exp-role"><span class="t" data-en="UI/UX Designer" data-nl="UI/UX Designer">UI/UX Designer</span></div>
+        <div class="exp-location"><span class="t" data-en="Luxembourg · Full-time" data-nl="Luxemburg · Voltijds">Luxembourg · Full-time</span></div>
+        <p class="exp-desc">Designed user interfaces and visual systems contributing to product consistency, usability and brand alignment. Built component libraries and maintained design documentation for scalable, structured delivery.</p>
+        <ul class="exp-list">
+          <li>Responsive UI layouts and interaction concepts</li>
+          <li>High-fidelity mockups, prototypes and component libraries in Figma</li>
+          <li>Brand identity elements and logo variations</li>
+          <li>Digital assets for infographics and marketing content</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-company">Van Eyck Academie</div>
+          <div class="exp-period">Sep 2016 – Mar 2017</div>
+        </div>
+        <div class="exp-role"><span class="t" data-en="Artist Assistant" data-nl="Kunstassistent">Artist Assistant</span></div>
+        <div class="exp-location"><span class="t" data-en="Maastricht, The Netherlands · Part-time" data-nl="Maastricht, Nederland · Deeltijds">Maastricht, The Netherlands · Part-time</span></div>
+        <ul class="exp-list">
+          <li>Supported professional artists in creation and setup of art exhibitions</li>
+          <li>Supervised production planning and managed smooth output</li>
+        </ul>
+      </div>
+
+    </div><!-- /main -->
+  </div><!-- /grid -->
+</div><!-- /page -->
+
+<script>
+  // ── Scroll animation ──────────────────────────
+  const items = document.querySelectorAll('.exp-item');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  items.forEach(el => observer.observe(el));
+  setTimeout(() => {
+    items.forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
+    });
+  }, 100);
+
+  // ── Language switch ───────────────────────────
+  let currentLang = 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+    document.querySelectorAll('.t').forEach(el => {
+      const val = el.dataset[lang];
+      if (val !== undefined) el.textContent = val;
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('onclick').includes("'" + lang + "'"));
+    });
+  }
+</script>
+
+</body>
+</html>
