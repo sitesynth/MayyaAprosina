@@ -459,7 +459,7 @@
     <button class="lang-btn" onclick="setLang('nl')">NL</button>
   </div>
   <div class="toolbar-divider"></div>
-  <button class="pdf-btn" onclick="window.print()">↓ PDF</button>
+  <button class="pdf-btn" onclick="downloadPDF()">↓ PDF</button>
 </div>
 
 <div class="page">
@@ -703,7 +703,29 @@
   </div><!-- /grid -->
 </div><!-- /page -->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
+  // ── PDF download ──────────────────────────────
+  function downloadPDF() {
+    const btn = document.querySelector('.pdf-btn');
+    btn.textContent = '…';
+    btn.disabled = true;
+
+    const opt = {
+      margin:      0,
+      filename:    'Mayya_Aprosina_CV.pdf',
+      image:       { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+      jsPDF:       { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak:   { mode: ['avoid-all'] }
+    };
+
+    html2pdf().set(opt).from(document.querySelector('.page')).save().then(() => {
+      btn.textContent = '↓ PDF';
+      btn.disabled = false;
+    });
+  }
+
   // ── Scroll animation ──────────────────────────
   const items = document.querySelectorAll('.exp-item');
   const observer = new IntersectionObserver((entries) => {
