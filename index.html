@@ -703,32 +703,35 @@
   </div><!-- /grid -->
 </div><!-- /page -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
   // ── PDF download ──────────────────────────────
   function downloadPDF() {
-    const btn = document.querySelector('.pdf-btn');
-    btn.textContent = '…';
-    btn.disabled = true;
-
-    // Force all animated items visible before capture
-    const expItems = document.querySelectorAll('.exp-item');
-    expItems.forEach(el => el.classList.add('visible'));
-
-    const opt = {
-      margin:      0,
-      filename:    'Mayya_Aprosina_CV.pdf',
-      image:       { type: 'jpeg', quality: 1 },
-      html2canvas: { scale: 3, useCORS: true, scrollY: 0, letterRendering: true },
-      jsPDF:       { unit: 'mm', format: 'a4', orientation: 'portrait' },
-      pagebreak:   { mode: ['css', 'legacy'] }
-    };
-
-    html2pdf().set(opt).from(document.querySelector('.page')).save().then(() => {
-      btn.textContent = '↓ PDF';
-      btn.disabled = false;
-    });
+    // Force all animated items visible
+    document.querySelectorAll('.exp-item').forEach(el => el.classList.add('visible'));
+    window.scrollTo(0, 0);
+    setTimeout(() => window.print(), 80);
   }
+
+  // Show hint toast when PDF btn clicked
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.querySelector('.pdf-btn');
+    const hint = document.createElement('div');
+    hint.id = 'pdf-hint';
+    hint.innerHTML = 'В диалоге выбери <b>«Сохранить как PDF»</b><br>Поля: Нет &nbsp;·&nbsp; Фон: ✓';
+    hint.style.cssText = `
+      position:fixed; bottom:24px; right:20px; background:#1C1C1C; color:#fff;
+      font-family:'DM Sans',sans-serif; font-size:11px; line-height:1.6;
+      padding:10px 14px; border-radius:4px; z-index:200;
+      opacity:0; transition:opacity 0.3s; pointer-events:none;
+      box-shadow:0 4px 16px rgba(0,0,0,0.2);
+    `;
+    document.body.appendChild(hint);
+
+    btn.addEventListener('click', () => {
+      hint.style.opacity = '1';
+      setTimeout(() => { hint.style.opacity = '0'; }, 5000);
+    });
+  });
 
   // ── Scroll animation ──────────────────────────
   const items = document.querySelectorAll('.exp-item');
