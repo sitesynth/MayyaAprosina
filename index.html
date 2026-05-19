@@ -23,38 +23,45 @@
     color: var(--charcoal);
     font-family: 'DM Sans', sans-serif;
     font-weight: 300;
-    font-size: 13px;
-    line-height: 1.7;
+    font-size: 12.5px;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
+    padding: 24px 0;
   }
 
-  .page {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 64px 48px;
-    background: var(--warm-white);
+  /* A4 page — те же размеры на экране и в PDF (WYSIWYG) */
+  .page, .page-2, .page-3 {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto 24px;
+    padding: 12mm;
+    background: white;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    overflow: hidden;
+    box-sizing: border-box;
   }
+  .page-3 { margin-bottom: 0; }
 
   /* ── HEADER ─────────────────────────────────── */
   header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     border-bottom: 1px solid var(--charcoal);
-    margin-bottom: 48px;
+    margin-bottom: 32px;
     gap: 24px;
   }
 
   .header-left {
     display: flex;
     align-items: flex-end;
-    gap: 24px;
+    gap: 26px;
   }
 
   .header-photo {
-    width: 110px;
-    height: 110px;
+    width: 104px;
+    height: 104px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
@@ -71,7 +78,7 @@
 
   .name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
+    font-size: 44px;
     font-weight: 300;
     letter-spacing: -0.5px;
     line-height: 1;
@@ -93,7 +100,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
   }
 
   .contact a, .contact span {
@@ -112,9 +119,9 @@
     font-size: 15px;
     font-style: italic;
     color: var(--mid);
-    line-height: 1.75;
-    margin-bottom: 40px;
-    padding-bottom: 40px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
     border-bottom: 1px solid var(--line);
   }
 
@@ -122,23 +129,23 @@
   .grid {
     display: grid;
     grid-template-columns: 200px 1fr;
-    gap: 0 48px;
+    gap: 0 32px;
   }
 
   /* ── SIDEBAR ─────────────────────────────────── */
   .sidebar {
-    padding-right: 48px;
+    padding-right: 32px;
     border-right: 1px solid var(--line);
   }
 
   .sidebar-section {
-    margin-bottom: 36px;
+    margin-bottom: 28px;
   }
 
   .sidebar-section:last-child { margin-bottom: 0; }
 
   .section-label {
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -177,7 +184,7 @@
   }
 
   .skill-list li {
-    font-size: 12px;
+    font-size: 12.5px;
     color: var(--mid);
     display: flex;
     align-items: center;
@@ -197,24 +204,24 @@
   .tag-cloud {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 4px;
   }
 
   .tag {
-    font-size: 10px;
+    font-size: 9px;
     color: var(--mid);
     border: 1px solid var(--line);
-    padding: 3px 8px;
+    padding: 2px 6px;
     border-radius: 2px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
   }
 
   .tag img {
-    width: 13px;
-    height: 13px;
+    width: 10px;
+    height: 10px;
     object-fit: contain;
     flex-shrink: 0;
   }
@@ -230,20 +237,20 @@
   .lang-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 9px;
   }
 
   .lang-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 12px;
+    font-size: 12.5px;
   }
 
   .lang-name { color: var(--charcoal); }
 
   .lang-level {
-    font-size: 10px;
+    font-size: 10.5px;
     color: var(--light);
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -264,19 +271,19 @@
 
   .edu-school {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 13px;
     color: var(--charcoal);
     line-height: 1.3;
   }
 
   .edu-degree {
-    font-size: 11px;
+    font-size: 11.5px;
     color: var(--mid);
     margin-top: 2px;
   }
 
   .edu-year {
-    font-size: 10px;
+    font-size: 10.5px;
     color: var(--light);
     margin-top: 2px;
   }
@@ -285,8 +292,8 @@
   .main { }
 
   .exp-item {
-    margin-bottom: 36px;
-    padding-bottom: 36px;
+    margin-bottom: 26px;
+    padding-bottom: 26px;
     border-bottom: 1px solid var(--line);
     opacity: 0;
     transform: translateY(18px);
@@ -312,7 +319,7 @@
   }
 
   .exp-company {
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 500;
     letter-spacing: 1.8px;
     text-transform: uppercase;
@@ -320,7 +327,7 @@
   }
 
   .exp-period {
-    font-size: 11px;
+    font-size: 11.5px;
     color: var(--light);
     letter-spacing: 0.3px;
   }
@@ -330,20 +337,20 @@
     font-size: 22px;
     font-weight: 400;
     color: var(--charcoal);
-    margin-bottom: 3px;
+    margin-bottom: 4px;
     line-height: 1.2;
   }
 
   .exp-location {
-    font-size: 11px;
+    font-size: 11.5px;
     color: var(--light);
-    margin-bottom: 12px;
+    margin-bottom: 11px;
   }
 
   .exp-desc {
     font-size: 12.5px;
     color: var(--mid);
-    line-height: 1.75;
+    line-height: 1.7;
     margin-bottom: 10px;
   }
 
@@ -427,26 +434,34 @@
 
   .pdf-btn:hover { background: var(--accent); }
 
-  /* ── PRINT ───────────────────────────────────── */
+  /* ── PRINT (WYSIWYG — те же размеры что на экране) ── */
   @media print {
-    body { background: white; font-size: 11px; }
-    .page { padding: 32px; max-width: 100%; box-shadow: none; }
-    .exp-item { opacity: 1 !important; transform: none !important; }
-    .name { font-size: 48px; }
-    .toolbar { display: none; }
+    html, body { margin: 0; padding: 0; background: white; }
+    .toolbar { display: none !important; }
+    .page, .page-2, .page-3 {
+      margin: 0;
+      box-shadow: none;
+      page-break-after: always;
+      break-after: page;
+    }
+    .page-2, .page-3 {
+      page-break-before: always;
+      break-before: page;
+    }
+    .page-3 {
+      page-break-after: auto;
+      break-after: auto;
+    }
+    /* Отключаем анимацию для PDF — все блоки видимы */
+    .exp-item {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
 
   @page { size: A4; margin: 0; }
-
-  /* ── RESPONSIVE ──────────────────────────────── */
-  @media (max-width: 700px) {
-    .grid { grid-template-columns: 1fr; }
-    .sidebar { border-right: none; border-bottom: 1px solid var(--line); padding-right: 0; padding-bottom: 32px; margin-bottom: 32px; }
-    .page { padding: 32px 24px; }
-    header { grid-template-columns: 1fr; }
-    .contact { text-align: left; margin-top: 16px; }
-    .name { font-size: 42px; }
-  }
 </style>
 </head>
 <body>
@@ -484,14 +499,6 @@
     </div>
   </header>
 
-  <!-- PROFILE -->
-  <p class="profile">
-    <span class="t"
-      data-en="Product Designer with entrepreneurial product ownership experience, bridging the gap between technical teams and end users to deliver customer-centric digital solutions. With 5+ years leading cross-functional teams in digitalisation projects, I combine strategic product thinking with hands-on implementation expertise. As an entrepreneur, I've driven complete product lifecycles from vision to launch, translating customer needs into concrete roadmaps and managing development teams to deliver robust digital products."
-      data-nl="Product Designer met ondernemingservaring in productbeheer, die de kloof overbrugt tussen technische teams en eindgebruikers om klantgerichte digitale oplossingen te leveren. Met meer dan 5 jaar leiding geven aan cross-functionele teams in digitaliseringsprojecten, combineer ik strategisch productdenken met praktische implementatie-expertise. Als ondernemer heb ik complete productlevenscycli aangestuurd van visie tot lancering, waarbij ik klantbehoeften vertaalde naar concrete roadmaps en ontwikkelteams aanstuurde om robuuste digitale producten te leveren."
-    >Product Designer with entrepreneurial product ownership experience, bridging the gap between technical teams and end users to deliver customer-centric digital solutions. With 5+ years leading cross-functional teams in digitalisation projects, I combine strategic product thinking with hands-on implementation expertise. As an entrepreneur, I've driven complete product lifecycles from vision to launch, translating customer needs into concrete roadmaps and managing development teams to deliver robust digital products.</span>
-  </p>
-
   <div class="grid">
 
     <!-- SIDEBAR -->
@@ -521,24 +528,90 @@
         <div class="section-label"><span class="t" data-en="Software" data-nl="Software">Software</span></div>
         <div class="tag-cloud">
           <span class="tag"><img src="tools/figma.svg" alt="">Figma</span>
+          <span class="tag"><img src="tools/framer.svg" alt="">Framer</span>
+          <span class="tag"><img src="tools/webflow.svg" alt="">Webflow</span>
           <span class="tag"><img src="tools/adobeillustrator.svg" alt="">Illustrator</span>
           <span class="tag"><img src="tools/photoshop.svg" alt="">Photoshop</span>
           <span class="tag"><img src="tools/ae.svg" alt="">After Effects</span>
           <span class="tag"><img src="tools/premierepro.svg" alt="">Premiere Pro</span>
-          <span class="tag"><img src="tools/visualstudio.svg" alt="">Visual Studio</span>
+          <span class="tag"><img src="tools/visualstudio.svg" alt="">VS Code</span>
+          <span class="tag"><img src="tools/cursor.svg" alt="">Cursor</span>
+          <span class="tag"><img src="tools/claude.svg" alt="">Claude</span>
+          <span class="tag"><img src="tools/openai.svg" alt="">ChatGPT</span>
+          <span class="tag"><img src="tools/copilotgithub.svg" alt="" style="filter: brightness(0);">Copilot</span>
+          <span class="tag"><img src="tools/git.svg" alt="">Git</span>
+          <span class="tag"><img src="tools/github.svg" alt="" style="filter: brightness(0);">GitHub</span>
+          <span class="tag"><img src="tools/typescript.svg" alt="">TypeScript</span>
+          <span class="tag"><img src="tools/tailwindcss.svg" alt="">Tailwind</span>
+          <span class="tag"><img src="tools/storybook.svg" alt="">Storybook</span>
+          <span class="tag"><img src="tools/vercel.svg" alt="" style="filter: brightness(0);">Vercel</span>
           <span class="tag"><img src="tools/jira.svg" alt="">Jira</span>
           <span class="tag"><img src="tools/monday-icon.svg" alt="">Monday.com</span>
           <span class="tag"><img src="tools/clickup.svg" alt="">ClickUp</span>
           <span class="tag"><img src="tools/miro.svg" alt="">Miro</span>
           <span class="tag"><img src="tools/notion.svg" alt="">Notion</span>
-          <span class="tag"><img src="tools/github.svg" alt="" style="filter: brightness(0);">GitHub</span>
           <span class="tag"><img src="tools/atlassian.svg" alt="">Confluence</span>
           <span class="tag"><img src="tools/microsoft.svg" alt="">MS Teams</span>
           <span class="tag"><img src="tools/wordpress.svg" alt="">WordPress</span>
-          <span class="tag"><img src="tools/react.svg" alt="">React</span>
-          <span class="tag"><img src="tools/cloudflare.svg" alt="">Cloudflare</span>
         </div>
       </div>
+
+    </div><!-- /sidebar -->
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <p class="profile">
+        <span class="t"
+          data-en="Product Designer with entrepreneurial product ownership experience, bridging the gap between technical teams and end users to deliver customer-centric digital solutions. With 5+ years leading cross-functional teams in digitalisation projects, I combine strategic product thinking with hands-on implementation expertise. As an entrepreneur, I've driven complete product lifecycles from vision to launch, translating customer needs into concrete roadmaps and managing development teams to deliver robust digital products."
+          data-nl="Product Designer met ondernemingservaring in productbeheer, die de kloof overbrugt tussen technische teams en eindgebruikers om klantgerichte digitale oplossingen te leveren. Met meer dan 5 jaar leiding geven aan cross-functionele teams in digitaliseringsprojecten, combineer ik strategisch productdenken met praktische implementatie-expertise. Als ondernemer heb ik complete productlevenscycli aangestuurd van visie tot lancering, waarbij ik klantbehoeften vertaalde naar concrete roadmaps en ontwikkelteams aanstuurde om robuuste digitale producten te leveren."
+        >Product Designer with entrepreneurial product ownership experience, bridging the gap between technical teams and end users to deliver customer-centric digital solutions. With 5+ years leading cross-functional teams in digitalisation projects, I combine strategic product thinking with hands-on implementation expertise. As an entrepreneur, I've driven complete product lifecycles from vision to launch, translating customer needs into concrete roadmaps and managing development teams to deliver robust digital products.</span>
+      </p>
+
+      <div class="section-label" style="margin-bottom: 24px;"><span class="t" data-en="Experience" data-nl="Ervaring">Experience</span></div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-company">Idalko</div>
+          <div class="exp-period">Jul 2023 – Dec 2025</div>
+        </div>
+        <div class="exp-role"><span class="t" data-en="Digital Specialist Partner" data-nl="Digitale Specialist Partner">Digital Specialist Partner</span></div>
+        <div class="exp-location"><span class="t" data-en="Antwerp, Belgium · Part-time" data-nl="Antwerpen, België · Deeltijds">Antwerp, Belgium · Part-time</span></div>
+        <p class="exp-desc">Long-term design and product collaborator supporting Idalko across brand, digital platforms and software solutions. Translated business needs into user flows and designed intuitive user experiences for websites, customer portals and internal tools.</p>
+        <ul class="exp-list">
+          <li>Product-focused UX &amp; interface design</li>
+          <li>Discovery input: research &amp; user pain point analysis</li>
+          <li>Brand identity &amp; visual language development</li>
+          <li>Digital experience design for portals and software</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-company">Isabel</div>
+          <div class="exp-period">May 2024 – Aug 2025</div>
+        </div>
+        <div class="exp-role"><span class="t" data-en="Product Designer" data-nl="Product Designer">Product Designer</span></div>
+        <div class="exp-location"><span class="t" data-en="Brussels, Belgium · Full-time" data-nl="Brussel, België · Voltijds">Brussels, Belgium · Full-time</span></div>
+        <p class="exp-desc">Designed and improved user experiences for financial software and multi-banking platforms serving enterprise clients. Worked closely with product managers, analysts and engineering teams to translate complex financial workflows into clear, efficient and user-friendly solutions.</p>
+        <ul class="exp-list">
+          <li>User-centered UX &amp; interaction design</li>
+          <li>Wireframing &amp; prototyping in Figma</li>
+          <li>Translating requirements into user flows &amp; interface logic</li>
+          <li>Design system &amp; component library development</li>
+          <li>Accessibility &amp; responsive standards (WCAG)</li>
+        </ul>
+      </div>
+
+    </div><!-- /main -->
+  </div><!-- /grid -->
+</div><!-- /page 1 -->
+
+<div class="page page-2">
+  <div class="grid">
+
+    <!-- SIDEBAR (page 2) -->
+    <div class="sidebar">
 
       <div class="sidebar-section">
         <div class="section-label"><span class="t" data-en="Languages" data-nl="Talen">Languages</span></div>
@@ -588,43 +661,10 @@
 
     </div><!-- /sidebar -->
 
-    <!-- MAIN -->
+    <!-- MAIN (page 2) -->
     <div class="main">
 
-      <div class="section-label" style="margin-bottom: 24px;"><span class="t" data-en="Experience" data-nl="Ervaring">Experience</span></div>
-
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-company">Idalko</div>
-          <div class="exp-period">Jul 2023 – Dec 2025</div>
-        </div>
-        <div class="exp-role"><span class="t" data-en="Digital Specialist Partner" data-nl="Digitale Specialist Partner">Digital Specialist Partner</span></div>
-        <div class="exp-location"><span class="t" data-en="Antwerp, Belgium · Part-time" data-nl="Antwerpen, België · Deeltijds">Antwerp, Belgium · Part-time</span></div>
-        <p class="exp-desc t" data-en="Long-term design and product collaborator supporting Idalko across brand, digital platforms and software solutions. Translated business needs into user flows and designed intuitive user experiences for websites, customer portals and internal tools." data-nl="Langdurige design- en productsamenwerking ter ondersteuning van Idalko op het gebied van merk, digitale platforms en softwareoplossingen. Bedrijfsbehoeften vertaald naar gebruikersstromen en intuïtieve gebruikerservaringen ontworpen voor websites, klantportalen en interne tools.">Long-term design and product collaborator supporting Idalko across brand, digital platforms and software solutions. Translated business needs into user flows and designed intuitive user experiences for websites, customer portals and internal tools.</p>
-        <ul class="exp-list">
-          <li class="t" data-en="Product-focused UX &amp; interface design" data-nl="Productgericht UX- en interfaceontwerp">Product-focused UX &amp; interface design</li>
-          <li class="t" data-en="Discovery input: research &amp; user pain point analysis" data-nl="Discovery-input: onderzoek en analyse van gebruikerspijnpunten">Discovery input: research &amp; user pain point analysis</li>
-          <li class="t" data-en="Brand identity &amp; visual language development" data-nl="Ontwikkeling van merkidentiteit en visuele taal">Brand identity &amp; visual language development</li>
-          <li class="t" data-en="Digital experience design for portals and software" data-nl="Digitaal ervaringsontwerp voor portalen en software">Digital experience design for portals and software</li>
-        </ul>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-company">Isabel</div>
-          <div class="exp-period">May 2024 – Aug 2025</div>
-        </div>
-        <div class="exp-role"><span class="t" data-en="Product Designer" data-nl="Product Designer">Product Designer</span></div>
-        <div class="exp-location"><span class="t" data-en="Brussels, Belgium · Full-time" data-nl="Brussel, België · Voltijds">Brussels, Belgium · Full-time</span></div>
-        <p class="exp-desc t" data-en="Designed and improved user experiences for financial software and multi-banking platforms serving enterprise clients. Worked closely with product managers, analysts and engineering teams to translate complex financial workflows into clear, efficient and user-friendly solutions." data-nl="Gebruikerservaringen ontworpen en verbeterd voor financiële software en multi-bankingplatforms voor zakelijke klanten. Nauw samengewerkt met productmanagers, analisten en engineeringteams om complexe financiële workflows te vertalen naar heldere, efficiënte en gebruiksvriendelijke oplossingen.">Designed and improved user experiences for financial software and multi-banking platforms serving enterprise clients. Worked closely with product managers, analysts and engineering teams to translate complex financial workflows into clear, efficient and user-friendly solutions.</p>
-        <ul class="exp-list">
-          <li class="t" data-en="User-centered UX &amp; interaction design" data-nl="Gebruikersgericht UX- en interactieontwerp">User-centered UX &amp; interaction design</li>
-          <li class="t" data-en="Wireframing &amp; prototyping in Figma" data-nl="Wireframing en prototyping in Figma">Wireframing &amp; prototyping in Figma</li>
-          <li class="t" data-en="Translating requirements into user flows &amp; interface logic" data-nl="Vereisten vertalen naar gebruikersstromen en interface-logica">Translating requirements into user flows &amp; interface logic</li>
-          <li class="t" data-en="Design system &amp; component library development" data-nl="Ontwikkeling van designsysteem en componentenbibliotheek">Design system &amp; component library development</li>
-          <li class="t" data-en="Accessibility &amp; responsive standards (WCAG)" data-nl="Toegankelijkheids- en responsieve standaarden (WCAG)">Accessibility &amp; responsive standards (WCAG)</li>
-        </ul>
-      </div>
+      <div class="section-label" style="margin-bottom: 24px;"><span class="t" data-en="Experience (continued)" data-nl="Ervaring (vervolg)">Experience (continued)</span></div>
 
       <div class="exp-item">
         <div class="exp-header">
@@ -633,12 +673,12 @@
         </div>
         <div class="exp-role"><span class="t" data-en="Digital Production Manager" data-nl="Digitale Productiemanager">Digital Production Manager</span></div>
         <div class="exp-location"><span class="t" data-en="Antwerp, Belgium · Full-time" data-nl="Antwerpen, België · Voltijds">Antwerp, Belgium · Full-time</span></div>
-        <p class="exp-desc t" data-en="Managed end-to-end execution of visual and digital projects, coordinating cross-functional teams to deliver high-quality assets on time. Maintained smooth communication between design, marketing and development units." data-nl="End-to-end uitvoering van visuele en digitale projecten beheerd, waarbij cross-functionele teams werden gecoördineerd om hoogwaardige resultaten tijdig te leveren. Soepele communicatie gehandhaafd tussen ontwerp-, marketing- en ontwikkelingsafdelingen.">Managed end-to-end execution of visual and digital projects, coordinating cross-functional teams to deliver high-quality assets on time. Maintained smooth communication between design, marketing and development units.</p>
+        <p class="exp-desc">Managed end-to-end execution of visual and digital projects, coordinating cross-functional teams to deliver high-quality assets on time. Maintained smooth communication between design, marketing and development units.</p>
         <ul class="exp-list">
-          <li class="t" data-en="Cross-functional coordination &amp; stakeholder alignment" data-nl="Cross-functionele coördinatie en afstemming met stakeholders">Cross-functional coordination &amp; stakeholder alignment</li>
-          <li class="t" data-en="Project planning, tracking &amp; delivery" data-nl="Projectplanning, -bewaking en -oplevering">Project planning, tracking &amp; delivery</li>
-          <li class="t" data-en="Creative direction &amp; brand consistency" data-nl="Creatieve regie en merkconsistentie">Creative direction &amp; brand consistency</li>
-          <li class="t" data-en="Oversight of web and digital content workflows" data-nl="Toezicht op web- en digitale contentwerkstromen">Oversight of web and digital content workflows</li>
+          <li>Cross-functional coordination &amp; stakeholder alignment</li>
+          <li>Project planning, tracking &amp; delivery</li>
+          <li>Creative direction &amp; brand consistency</li>
+          <li>Oversight of web and digital content workflows</li>
         </ul>
       </div>
 
@@ -649,12 +689,12 @@
         </div>
         <div class="exp-role"><span class="t" data-en="UI/UX Designer" data-nl="UI/UX Designer">UI/UX Designer</span></div>
         <div class="exp-location"><span class="t" data-en="Antwerp, Belgium · Full-time" data-nl="Antwerpen, België · Voltijds">Antwerp, Belgium · Full-time</span></div>
-        <p class="exp-desc t" data-en="Delivered UX and interface design for an integration platform and marketing ecosystem. Ensured consistency across digital touchpoints and contributed to communicating complex workflows in a clear and accessible way." data-nl="UX- en interfaceontwerp geleverd voor een integratieplatform en marketingecosysteem. Consistentie gewaarborgd over digitale contactpunten en bijgedragen aan het communiceren van complexe workflows op een heldere en toegankelijke manier.">Delivered UX and interface design for an integration platform and marketing ecosystem. Ensured consistency across digital touchpoints and contributed to communicating complex workflows in a clear and accessible way.</p>
+        <p class="exp-desc">Delivered UX and interface design for an integration platform and marketing ecosystem. Ensured consistency across digital touchpoints and contributed to communicating complex workflows in a clear and accessible way.</p>
         <ul class="exp-list">
-          <li class="t" data-en="Designed UX flows and UI layouts aligned with product requirements" data-nl="UX-stromen en UI-indelingen ontworpen in lijn met productvereisten">Designed UX flows and UI layouts aligned with product requirements</li>
-          <li class="t" data-en="Interface components and page structures with accessibility best practices" data-nl="Interfacecomponenten en paginastructuren met toegankelijkheid als best practice">Interface components and page structures with accessibility best practices</li>
-          <li class="t" data-en="Visual materials and interactive assets for complex integrations" data-nl="Visuele materialen en interactieve elementen voor complexe integraties">Visual materials and interactive assets for complex integrations</li>
-          <li class="t" data-en="Collaborated with product and engineering teams to refine user journeys" data-nl="Samengewerkt met product- en engineeringteams om gebruikerstrajecten te verfijnen">Collaborated with product and engineering teams to refine user journeys</li>
+          <li>Designed UX flows and UI layouts aligned with product requirements</li>
+          <li>Interface components and page structures with accessibility best practices</li>
+          <li>Visual materials and interactive assets for complex integrations</li>
+          <li>Collaborated with product and engineering teams to refine user journeys</li>
         </ul>
       </div>
 
@@ -665,14 +705,22 @@
         </div>
         <div class="exp-role"><span class="t" data-en="Design Specialist" data-nl="Designspecialist">Design Specialist</span></div>
         <div class="exp-location"><span class="t" data-en="London, United Kingdom · Full-time" data-nl="Londen, Verenigd Koninkrijk · Voltijds">London, United Kingdom · Full-time</span></div>
-        <p class="exp-desc t" data-en="Regional Services Design Specialist for the P&amp;G account within Integrated Facilities Management. Structured communication workflows, translated operational requirements into clear materials, and unified brand experience across diverse regional clusters." data-nl="Regionaal Design Specialist voor het P&amp;G-account binnen Integrated Facilities Management. Communicatiewerkstromen gestructureerd, operationele vereisten vertaald naar heldere materialen en merkervaring geünificeerd over diverse regionale clusters.">Regional Services Design Specialist for the P&amp;G account within Integrated Facilities Management. Structured communication workflows, translated operational requirements into clear materials, and unified brand experience across diverse regional clusters.</p>
+        <p class="exp-desc">Regional Services Design Specialist for the P&amp;G account within Integrated Facilities Management. Structured communication workflows, translated operational requirements into clear materials, and unified brand experience across diverse regional clusters.</p>
         <ul class="exp-list">
-          <li class="t" data-en="Communication templates and standardized libraries for cross-site use" data-nl="Communicatiesjablonen en gestandaardiseerde bibliotheken voor gebruik op meerdere locaties">Communication templates and standardized libraries for cross-site use</li>
-          <li class="t" data-en="Brand guidelines alignment for facility environments" data-nl="Afstemming op merkrichtlijnen voor faciliteitsomgevingen">Brand guidelines alignment for facility environments</li>
-          <li class="t" data-en="Executive presentation materials and data-informed visual communication" data-nl="Presentatiematerialen voor directie en datagestuurde visuele communicatie">Executive presentation materials and data-informed visual communication</li>
-          <li class="t" data-en="Digital and print communication materials, including videos" data-nl="Digitale en gedrukte communicatiematerialen, inclusief video's">Digital and print communication materials, including videos</li>
+          <li>Communication templates and standardized libraries for cross-site use</li>
+          <li>Brand guidelines alignment for facility environments</li>
+          <li>Executive presentation materials and data-informed visual communication</li>
+          <li>Digital and print communication materials, including videos</li>
         </ul>
       </div>
+
+    </div><!-- /main -->
+  </div><!-- /grid -->
+</div><!-- /page 2 -->
+
+<div class="page page-3">
+
+  <div class="section-label" style="margin-bottom: 24px;"><span class="t" data-en="Experience (continued)" data-nl="Ervaring (vervolg)">Experience (continued)</span></div>
 
       <div class="exp-item">
         <div class="exp-header">
@@ -681,12 +729,12 @@
         </div>
         <div class="exp-role"><span class="t" data-en="UI/UX Designer" data-nl="UI/UX Designer">UI/UX Designer</span></div>
         <div class="exp-location"><span class="t" data-en="Luxembourg · Full-time" data-nl="Luxemburg · Voltijds">Luxembourg · Full-time</span></div>
-        <p class="exp-desc t" data-en="Designed user interfaces and visual systems contributing to product consistency, usability and brand alignment. Built component libraries and maintained design documentation for scalable, structured delivery." data-nl="Gebruikersinterfaces en visuele systemen ontworpen die bijdragen aan productconsistentie, bruikbaarheid en merkafstemming. Componentenbibliotheken opgebouwd en ontwerpdocumentatie bijgehouden voor schaalbare, gestructureerde levering.">Designed user interfaces and visual systems contributing to product consistency, usability and brand alignment. Built component libraries and maintained design documentation for scalable, structured delivery.</p>
+        <p class="exp-desc">Designed user interfaces and visual systems contributing to product consistency, usability and brand alignment. Built component libraries and maintained design documentation for scalable, structured delivery.</p>
         <ul class="exp-list">
-          <li class="t" data-en="Responsive UI layouts and interaction concepts" data-nl="Responsieve UI-indelingen en interactieconcepten">Responsive UI layouts and interaction concepts</li>
-          <li class="t" data-en="High-fidelity mockups, prototypes and component libraries in Figma" data-nl="High-fidelity mockups, prototypen en componentenbibliotheken in Figma">High-fidelity mockups, prototypes and component libraries in Figma</li>
-          <li class="t" data-en="Brand identity elements and logo variations" data-nl="Merkidentiteitselementen en logovariaties">Brand identity elements and logo variations</li>
-          <li class="t" data-en="Digital assets for infographics and marketing content" data-nl="Digitale elementen voor infographics en marketingcontent">Digital assets for infographics and marketing content</li>
+          <li>Responsive UI layouts and interaction concepts</li>
+          <li>High-fidelity mockups, prototypes and component libraries in Figma</li>
+          <li>Brand identity elements and logo variations</li>
+          <li>Digital assets for infographics and marketing content</li>
         </ul>
       </div>
 
@@ -698,44 +746,20 @@
         <div class="exp-role"><span class="t" data-en="Artist Assistant" data-nl="Kunstassistent">Artist Assistant</span></div>
         <div class="exp-location"><span class="t" data-en="Maastricht, The Netherlands · Part-time" data-nl="Maastricht, Nederland · Deeltijds">Maastricht, The Netherlands · Part-time</span></div>
         <ul class="exp-list">
-          <li class="t" data-en="Supported professional artists in creation and setup of art exhibitions" data-nl="Professionele kunstenaars ondersteund bij het creëren en opzetten van kunsttentoonstellingen">Supported professional artists in creation and setup of art exhibitions</li>
-          <li class="t" data-en="Supervised production planning and managed smooth output" data-nl="Productieplanning begeleid en soepele uitvoer beheerd">Supervised production planning and managed smooth output</li>
+          <li>Supported professional artists in creation and setup of art exhibitions</li>
+          <li>Supervised production planning and managed smooth output</li>
         </ul>
       </div>
 
-    </div><!-- /main -->
-  </div><!-- /grid -->
-</div><!-- /page -->
+</div><!-- /page 3 -->
 
 <script>
   // ── PDF download ──────────────────────────────
   function downloadPDF() {
-    // Force all animated items visible
     document.querySelectorAll('.exp-item').forEach(el => el.classList.add('visible'));
     window.scrollTo(0, 0);
     setTimeout(() => window.print(), 80);
   }
-
-  // Show hint toast when PDF btn clicked
-  document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.querySelector('.pdf-btn');
-    const hint = document.createElement('div');
-    hint.id = 'pdf-hint';
-    hint.innerHTML = 'В диалоге выбери <b>«Сохранить как PDF»</b><br>Поля: Нет &nbsp;·&nbsp; Фон: ✓';
-    hint.style.cssText = `
-      position:fixed; bottom:24px; right:20px; background:#1C1C1C; color:#fff;
-      font-family:'DM Sans',sans-serif; font-size:11px; line-height:1.6;
-      padding:10px 14px; border-radius:4px; z-index:200;
-      opacity:0; transition:opacity 0.3s; pointer-events:none;
-      box-shadow:0 4px 16px rgba(0,0,0,0.2);
-    `;
-    document.body.appendChild(hint);
-
-    btn.addEventListener('click', () => {
-      hint.style.opacity = '1';
-      setTimeout(() => { hint.style.opacity = '0'; }, 5000);
-    });
-  });
 
   // ── Scroll animation ──────────────────────────
   const items = document.querySelectorAll('.exp-item');
