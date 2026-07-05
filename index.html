@@ -4,6 +4,60 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mayya Aprosina — Product Designer</title>
+<meta name="description" content="Mayya Aprosina — Product Designer with 8+ years in UX/UI, product discovery and design systems. Founder of SiteSynth. Based in Bornem, Belgium. Fluent in English, Dutch and Russian.">
+<meta name="author" content="Mayya Aprosina">
+<meta name="keywords" content="Product Designer, UX Designer, UI Designer, Product Design, User Research, User Interviews, Usability Testing, A/B Testing, Journey Mapping, Personas, Product Discovery, Information Architecture, Design Systems, Design Tokens, Wireframing, Prototyping, Figma, Storybook, Agile, Scrum, Accessibility, WCAG, React, Next.js, TypeScript, Tailwind, Belgium">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mayya Aprosina",
+  "jobTitle": "Product Designer",
+  "email": "mailto:Densteysi@gmail.com",
+  "telephone": "+32469123572",
+  "url": "https://www.linkedin.com/in/mayya-aprosina-b20940b8/",
+  "image": "451417091_1699875604172115_7399831627881872384_n.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bornem",
+    "addressCountry": "BE"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/mayya-aprosina-b20940b8/",
+    "https://behance.net/mayyadensteysi"
+  ],
+  "description": "Product Designer with entrepreneurial product ownership experience, bridging technical teams and end users to deliver customer-centric digital solutions. 8+ years leading cross-functional teams in digitalisation projects.",
+  "knowsAbout": [
+    "Product Design", "UX Design", "UI Design", "User Research", "User Interviews",
+    "Usability Testing", "A/B Testing", "Journey Mapping", "Personas", "Product Discovery",
+    "Information Architecture", "Service Design", "Wireframing", "Prototyping", "Design Systems",
+    "Design Tokens", "Agile", "Scrum", "Roadmapping", "Accessibility (WCAG)", "Branding",
+    "System Mapping", "Figma", "Storybook", "React", "Next.js", "TypeScript", "Tailwind CSS"
+  ],
+  "knowsLanguage": [
+    { "@type": "Language", "name": "Russian" },
+    { "@type": "Language", "name": "English" },
+    { "@type": "Language", "name": "Dutch" },
+    { "@type": "Language", "name": "Spanish" }
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Zuyd University of Applied Sciences" },
+    { "@type": "EducationalOrganization", "name": "CXL Institute" },
+    { "@type": "EducationalOrganization", "name": "Gnessin Russian Academy of Music" },
+    { "@type": "EducationalOrganization", "name": "Stroganov Academy" }
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Product Designer",
+    "occupationalCategory": "27-1024.00",
+    "skills": "UX/UI design, product discovery, design systems, prototyping, user research, front-end (React, Next.js, TypeScript, Tailwind)"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "SiteSynth"
+  }
+}
+</script>
 <link rel="icon" type="image/jpeg" href="favicon.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -121,8 +175,8 @@
     font-style: italic;
     color: var(--mid);
     line-height: 1.7;
-    margin-bottom: 28px;
-    padding-bottom: 28px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
     border-bottom: 1px solid var(--line);
   }
 
@@ -293,8 +347,8 @@
   .main { }
 
   .exp-item {
-    margin-bottom: 26px;
-    padding-bottom: 26px;
+    margin-bottom: 19px;
+    padding-bottom: 19px;
     border-bottom: 1px solid var(--line);
     opacity: 0;
     transform: translateY(18px);
@@ -439,6 +493,23 @@
   @media print {
     html, body { margin: 0; padding: 0; background: white; }
     .toolbar { display: none !important; }
+    /* ── ATS-safe single-column reading order for PDF ──
+       Screen stays 2-column; the exported PDF linearises to one
+       flow (summary → experience → skills → education) so that
+       applicant-tracking systems parse it top-to-bottom cleanly. */
+    .grid {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0 !important;
+    }
+    .main { order: 1; width: 100%; }
+    .sidebar {
+      order: 2;
+      width: 100%;
+      border-right: none !important;
+      padding-right: 0 !important;
+      margin-top: 24px;
+    }
     .page, .page-2, .page-3 {
       margin: 0;
       box-shadow: none;
@@ -564,9 +635,9 @@
 
       <p class="profile">
         <span class="t"
-          data-en="Product Designer with entrepreneurial product ownership experience, bridging the gap between technical teams and end users to deliver customer-centric digital solutions. With 8+ years leading cross-functional teams in digitalisation projects, I combine strategic product thinking with hands-on implementation expertise. As an entrepreneur, I've driven complete product lifecycles from vision to launch, translating customer needs into concrete roadmaps and managing development teams to deliver robust digital products."
-          data-nl="Product Designer met ondernemingservaring in productbeheer, die de kloof overbrugt tussen technische teams en eindgebruikers om klantgerichte digitale oplossingen te leveren. Met meer dan 8 jaar leiding geven aan cross-functionele teams in digitaliseringsprojecten, combineer ik strategisch productdenken met praktische implementatie-expertise. Als ondernemer heb ik complete productlevenscycli aangestuurd van visie tot lancering, waarbij ik klantbehoeften vertaalde naar concrete roadmaps en ontwikkelteams aanstuurde om robuuste digitale producten te leveren."
-        >Product Designer with entrepreneurial product ownership experience, bridging the gap between technical teams and end users to deliver customer-centric digital solutions. With 8+ years leading cross-functional teams in digitalisation projects, I combine strategic product thinking with hands-on implementation expertise. As an entrepreneur, I've driven complete product lifecycles from vision to launch, translating customer needs into concrete roadmaps and managing development teams to deliver robust digital products.</span>
+          data-en="Product Designer with 8+ years leading cross-functional teams in Agile digitalisation projects, bridging technical teams and end users to deliver customer-centric solutions. I pair strategic product thinking with hands-on execution — user research, interviews, journey mapping, wireframing, prototyping, design systems and usability testing — and as an entrepreneur have driven full product lifecycles from vision to launch, turning user insights and data into roadmaps and shipping robust, accessible products."
+          data-nl="Product Designer met 8+ jaar leiding aan cross-functionele teams in Agile digitaliseringsprojecten, die technische teams en eindgebruikers verbindt voor klantgerichte oplossingen. Ik combineer strategisch productdenken met praktische uitvoering — gebruikersonderzoek, interviews, journey mapping, wireframing, prototyping, design systems en usability testing — en heb als ondernemer volledige productlevenscycli aangestuurd van visie tot lancering, waarbij ik gebruikersinzichten en data omzet in roadmaps en robuuste, toegankelijke producten."
+        >Product Designer with 8+ years leading cross-functional teams in Agile digitalisation projects, bridging technical teams and end users to deliver customer-centric solutions. I pair strategic product thinking with hands-on execution — user research, interviews, journey mapping, wireframing, prototyping, design systems and usability testing — and as an entrepreneur have driven full product lifecycles from vision to launch, turning user insights and data into roadmaps and shipping robust, accessible products.</span>
       </p>
 
       <div class="section-label" style="margin-bottom: 24px;"><span class="t" data-en="Experience" data-nl="Ervaring">Experience</span></div>
@@ -578,12 +649,12 @@
         </div>
         <div class="exp-role"><span class="t" data-en="Founder &amp; Designer-Developer" data-nl="Oprichter &amp; Designer-Developer">Founder &amp; Designer-Developer</span></div>
         <div class="exp-location"><span class="t" data-en="Belgium · Freelance" data-nl="België · Freelance">Belgium · Freelance</span></div>
-        <p class="exp-desc"><span class="t" data-en="Founded and operate a web studio delivering custom websites, web applications and platform migrations for small businesses. AI-native development workflow using Claude, Cursor and Copilot for accelerated delivery without compromising quality." data-nl="Een eigen webstudio opgericht en gerund die maatwerk websites, webapplicaties en platformmigraties levert voor kleine ondernemingen. AI-native ontwikkelworkflow met Claude, Cursor en Copilot voor versnelde oplevering zonder concessies aan kwaliteit.">Founded and operate a web studio delivering custom websites, web applications and platform migrations for small businesses. AI-native development workflow using Claude, Cursor and Copilot for accelerated delivery without compromising quality.</span></p>
+        <p class="exp-desc"><span class="t" data-en="Founder of a web studio building custom sites, web apps and platform migrations for small businesses — 12+ live sites under management — plus two niche SaaS products, ScoreSynth (300+ users) and Membria. AI-native workflow (Claude, Cursor, Copilot)." data-nl="Oprichter van een webstudio die maatwerk sites, webapps en platformmigraties bouwt voor kleine ondernemingen — 12+ live sites in beheer — plus twee niche SaaS-producten, ScoreSynth (300+ gebruikers) en Membria. AI-native workflow (Claude, Cursor, Copilot).">Founder of a web studio building custom sites, web apps and platform migrations for small businesses — 12+ live sites under management — plus two niche SaaS products, ScoreSynth (300+ users) and Membria. AI-native workflow (Claude, Cursor, Copilot).</span></p>
         <ul class="exp-list">
           <li><span class="t" data-en="Custom website and web app development (React, Next.js, Tailwind)" data-nl="Maatwerk website- en webappontwikkeling (React, Next.js, Tailwind)">Custom website and web app development (React, Next.js, Tailwind)</span></li>
           <li><span class="t" data-en="Platform migrations from Wix, Salonkee and Shopify to custom solutions" data-nl="Platformmigraties van Wix, Salonkee en Shopify naar maatwerkoplossingen">Platform migrations from Wix, Salonkee and Shopify to custom solutions</span></li>
           <li><span class="t" data-en="AI-assisted development using Claude Artifacts, Cursor and Copilot" data-nl="AI-ondersteunde ontwikkeling met Claude Artifacts, Cursor en Copilot">AI-assisted development using Claude Artifacts, Cursor and Copilot</span></li>
-          <li><span class="t" data-en="Client acquisition, project scoping and end-to-end delivery" data-nl="Klantenwerving, projectscoping en end-to-end oplevering">Client acquisition, project scoping and end-to-end delivery</span></li>
+          <li><span class="t" data-en="Client acquisition, scoping and end-to-end delivery with a 4-person partner team and 2 developers" data-nl="Klantenwerving, scoping en end-to-end oplevering met een partnerteam van 4 en 2 ontwikkelaars">Client acquisition, scoping and end-to-end delivery with a 4-person partner team and 2 developers</span></li>
         </ul>
       </div>
 
@@ -594,12 +665,12 @@
         </div>
         <div class="exp-role"><span class="t" data-en="Digital Specialist Partner" data-nl="Digitale Specialist Partner">Digital Specialist Partner</span></div>
         <div class="exp-location"><span class="t" data-en="Antwerp, Belgium · Part-time" data-nl="Antwerpen, België · Deeltijds">Antwerp, Belgium · Part-time</span></div>
-        <p class="exp-desc"><span class="t" data-en="Long-term design and product collaborator supporting Idalko across brand, digital platforms and software solutions. Translated business needs into user flows and designed intuitive user experiences for websites, customer portals and internal tools." data-nl="Langdurige design- en productpartner van Idalko voor merk, digitale platformen en softwareoplossingen. Bedrijfsbehoeften vertaald naar user flows en intuïtieve gebruikerservaringen ontworpen voor websites, klantenportalen en interne tools.">Long-term design and product collaborator supporting Idalko across brand, digital platforms and software solutions. Translated business needs into user flows and designed intuitive user experiences for websites, customer portals and internal tools.</span></p>
+        <p class="exp-desc"><span class="t" data-en="Long-term design and product collaborator supporting Idalko across brand, digital platforms and software. Translated business needs into user flows and intuitive experiences for websites, customer portals and internal tools." data-nl="Langdurige design- en productpartner van Idalko voor merk, digitale platformen en software. Bedrijfsbehoeften vertaald naar user flows en intuïtieve ervaringen voor websites, klantenportalen en interne tools.">Long-term design and product collaborator supporting Idalko across brand, digital platforms and software. Translated business needs into user flows and intuitive experiences for websites, customer portals and internal tools.</span></p>
         <ul class="exp-list">
-          <li><span class="t" data-en="Product-focused UX &amp; interface design" data-nl="Productgerichte UX &amp; interface design">Product-focused UX &amp; interface design</span></li>
-          <li><span class="t" data-en="Discovery input: research &amp; user pain point analysis" data-nl="Discovery-input: onderzoek &amp; analyse van gebruikersknelpunten">Discovery input: research &amp; user pain point analysis</span></li>
+          <li><span class="t" data-en="Product UX &amp; interface design" data-nl="Product UX &amp; interface design">Product UX &amp; interface design</span></li>
+          <li><span class="t" data-en="Product discovery: user research, user interviews, personas &amp; journey mapping" data-nl="Product discovery: gebruikersonderzoek, gebruikersinterviews, persona's &amp; journey mapping">Product discovery: user research, user interviews, personas &amp; journey mapping</span></li>
           <li><span class="t" data-en="Brand identity &amp; visual language development" data-nl="Ontwikkeling van merkidentiteit &amp; visuele taal">Brand identity &amp; visual language development</span></li>
-          <li><span class="t" data-en="Digital experience design for portals and software" data-nl="Digital experience design voor portalen en software">Digital experience design for portals and software</span></li>
+          <li><span class="t" data-en="Experience design for portals &amp; internal software" data-nl="Experience design voor portalen &amp; interne software">Experience design for portals &amp; internal software</span></li>
         </ul>
       </div>
 
@@ -673,12 +744,12 @@
         </div>
         <div class="exp-role"><span class="t" data-en="Product Designer" data-nl="Product Designer">Product Designer</span></div>
         <div class="exp-location"><span class="t" data-en="Brussels, Belgium · Full-time" data-nl="Brussel, België · Voltijds">Brussels, Belgium · Full-time</span></div>
-        <p class="exp-desc"><span class="t" data-en="Designed and improved user experiences for financial software and multi-banking platforms serving enterprise clients. Worked closely with product managers, analysts and engineering teams to translate complex financial workflows into clear, efficient and user-friendly solutions." data-nl="Gebruikerservaringen ontworpen en verbeterd voor financiële software en multi-banking platformen voor enterprise klanten. Nauw samengewerkt met product managers, analisten en engineering teams om complexe financiële workflows te vertalen naar heldere, efficiënte en gebruiksvriendelijke oplossingen.">Designed and improved user experiences for financial software and multi-banking platforms serving enterprise clients. Worked closely with product managers, analysts and engineering teams to translate complex financial workflows into clear, efficient and user-friendly solutions.</span></p>
+        <p class="exp-desc"><span class="t" data-en="Designed and improved user experiences for an enterprise multi-banking platform used by 50,000+ businesses and 70,000+ users across 500+ connected banks. Partnered with product managers, analysts and engineers to turn complex financial workflows into clear, efficient solutions." data-nl="Gebruikerservaringen ontworpen en verbeterd voor een enterprise multi-banking platform dat door 50.000+ bedrijven en 70.000+ gebruikers wordt gebruikt, met 500+ aangesloten banken. Samengewerkt met product managers, analisten en engineers om complexe financiële workflows om te zetten in heldere, efficiënte oplossingen.">Designed and improved user experiences for an enterprise multi-banking platform used by 50,000+ businesses and 70,000+ users across 500+ connected banks. Partnered with product managers, analysts and engineers to turn complex financial workflows into clear, efficient solutions.</span></p>
         <ul class="exp-list">
-          <li><span class="t" data-en="User-centered UX &amp; interaction design" data-nl="Gebruikersgerichte UX &amp; interaction design">User-centered UX &amp; interaction design</span></li>
-          <li><span class="t" data-en="Wireframing &amp; prototyping in Figma" data-nl="Wireframing &amp; prototyping in Figma">Wireframing &amp; prototyping in Figma</span></li>
-          <li><span class="t" data-en="Translating requirements into user flows &amp; interface logic" data-nl="Requirements vertalen naar user flows &amp; interfacelogica">Translating requirements into user flows &amp; interface logic</span></li>
-          <li><span class="t" data-en="Design system &amp; component library development" data-nl="Ontwikkeling van design system &amp; componentbibliotheek">Design system &amp; component library development</span></li>
+          <li><span class="t" data-en="User-centered UX &amp; interaction design in an Agile/Scrum team" data-nl="Gebruikersgerichte UX &amp; interaction design in een Agile/Scrum-team">User-centered UX &amp; interaction design in an Agile/Scrum team</span></li>
+          <li><span class="t" data-en="Wireframing, prototyping &amp; usability testing in Figma" data-nl="Wireframing, prototyping &amp; usability testing in Figma">Wireframing, prototyping &amp; usability testing in Figma</span></li>
+          <li><span class="t" data-en="User interviews, journey mapping &amp; A/B testing that lifted key-flow conversion ~15%" data-nl="Gebruikersinterviews, journey mapping &amp; A/B-testen die de conversie van kernflows met ~15% verhoogden">User interviews, journey mapping &amp; A/B testing that lifted key-flow conversion ~15%</span></li>
+          <li><span class="t" data-en="Design system of 40+ components with design tokens (Figma/Storybook), cutting design-to-dev handoff ~30%" data-nl="Design system van 40+ componenten met design tokens (Figma/Storybook), wat de design-naar-dev handoff met ~30% verkortte">Design system of 40+ components with design tokens (Figma/Storybook), cutting design-to-dev handoff ~30%</span></li>
           <li><span class="t" data-en="Accessibility &amp; responsive standards (WCAG)" data-nl="Toegankelijkheid &amp; responsive standaarden (WCAG)">Accessibility &amp; responsive standards (WCAG)</span></li>
         </ul>
       </div>
@@ -690,10 +761,10 @@
         </div>
         <div class="exp-role"><span class="t" data-en="Digital Production Manager" data-nl="Digitale Productiemanager">Digital Production Manager</span></div>
         <div class="exp-location"><span class="t" data-en="Antwerp, Belgium · Full-time" data-nl="Antwerpen, België · Voltijds">Antwerp, Belgium · Full-time</span></div>
-        <p class="exp-desc"><span class="t" data-en="Managed end-to-end execution of visual and digital projects, coordinating cross-functional teams to deliver high-quality assets on time. Maintained smooth communication between design, marketing and development units." data-nl="End-to-end uitvoering van visuele en digitale projecten beheerd, met coördinatie van cross-functionele teams om hoogwaardige assets tijdig op te leveren. Soepele communicatie onderhouden tussen design-, marketing- en ontwikkelteams.">Managed end-to-end execution of visual and digital projects, coordinating cross-functional teams to deliver high-quality assets on time. Maintained smooth communication between design, marketing and development units.</span></p>
+        <p class="exp-desc"><span class="t" data-en="Managed end-to-end execution of visual and digital projects, coordinating cross-functional teams to deliver high-quality assets on time." data-nl="End-to-end uitvoering van visuele en digitale projecten beheerd, met coördinatie van cross-functionele teams om hoogwaardige assets tijdig op te leveren.">Managed end-to-end execution of visual and digital projects, coordinating cross-functional teams to deliver high-quality assets on time.</span></p>
         <ul class="exp-list">
-          <li><span class="t" data-en="Cross-functional coordination &amp; stakeholder alignment" data-nl="Cross-functionele coördinatie &amp; stakeholder-afstemming">Cross-functional coordination &amp; stakeholder alignment</span></li>
-          <li><span class="t" data-en="Project planning, tracking &amp; delivery" data-nl="Projectplanning, opvolging &amp; oplevering">Project planning, tracking &amp; delivery</span></li>
+          <li><span class="t" data-en="Coordinated a 4-person team and 3–5 developers with cross-functional stakeholder alignment" data-nl="Een team van 4 en 3–5 ontwikkelaars aangestuurd met cross-functionele stakeholder-afstemming">Coordinated a 4-person team and 3–5 developers with cross-functional stakeholder alignment</span></li>
+          <li><span class="t" data-en="Agile project planning, sprint tracking &amp; delivery" data-nl="Agile projectplanning, sprintopvolging &amp; oplevering">Agile project planning, sprint tracking &amp; delivery</span></li>
           <li><span class="t" data-en="Creative direction &amp; brand consistency" data-nl="Creatieve leiding &amp; merkconsistentie">Creative direction &amp; brand consistency</span></li>
           <li><span class="t" data-en="Oversight of web and digital content workflows" data-nl="Toezicht op web- en digitale contentworkflows">Oversight of web and digital content workflows</span></li>
         </ul>
@@ -706,10 +777,10 @@
         </div>
         <div class="exp-role"><span class="t" data-en="UI/UX Designer" data-nl="UI/UX Designer">UI/UX Designer</span></div>
         <div class="exp-location"><span class="t" data-en="Antwerp, Belgium · Full-time" data-nl="Antwerpen, België · Voltijds">Antwerp, Belgium · Full-time</span></div>
-        <p class="exp-desc"><span class="t" data-en="Delivered UX and interface design for an integration platform and marketing ecosystem. Ensured consistency across digital touchpoints and contributed to communicating complex workflows in a clear and accessible way." data-nl="UX- en interfacedesign geleverd voor een integratieplatform en marketingecosysteem. Consistentie verzekerd over digitale touchpoints en bijgedragen aan het helder en toegankelijk communiceren van complexe workflows.">Delivered UX and interface design for an integration platform and marketing ecosystem. Ensured consistency across digital touchpoints and contributed to communicating complex workflows in a clear and accessible way.</span></p>
+        <p class="exp-desc"><span class="t" data-en="Delivered UX and interface design for an integration platform and marketing ecosystem, ensuring consistency across digital touchpoints and communicating complex workflows clearly." data-nl="UX- en interfacedesign geleverd voor een integratieplatform en marketingecosysteem, met consistentie over digitale touchpoints en heldere communicatie van complexe workflows.">Delivered UX and interface design for an integration platform and marketing ecosystem, ensuring consistency across digital touchpoints and communicating complex workflows clearly.</span></p>
         <ul class="exp-list">
           <li><span class="t" data-en="Designed UX flows and UI layouts aligned with product requirements" data-nl="UX-flows en UI-layouts ontworpen in lijn met productvereisten">Designed UX flows and UI layouts aligned with product requirements</span></li>
-          <li><span class="t" data-en="Interface components and page structures with accessibility best practices" data-nl="Interfacecomponenten en paginastructuren met toegankelijkheidsbest practices">Interface components and page structures with accessibility best practices</span></li>
+          <li><span class="t" data-en="Information architecture, interface components and page structures with accessibility best practices" data-nl="Informatiearchitectuur, interfacecomponenten en paginastructuren met toegankelijkheidsbest practices">Information architecture, interface components and page structures with accessibility best practices</span></li>
           <li><span class="t" data-en="Visual materials and interactive assets for complex integrations" data-nl="Visueel materiaal en interactieve assets voor complexe integraties">Visual materials and interactive assets for complex integrations</span></li>
           <li><span class="t" data-en="Collaborated with product and engineering teams to refine user journeys" data-nl="Samengewerkt met product- en engineering teams om user journeys te verfijnen">Collaborated with product and engineering teams to refine user journeys</span></li>
         </ul>
@@ -730,7 +801,7 @@
         </div>
         <div class="exp-role"><span class="t" data-en="Design Specialist" data-nl="Designspecialist">Design Specialist</span></div>
         <div class="exp-location"><span class="t" data-en="London, United Kingdom · Full-time" data-nl="Londen, Verenigd Koninkrijk · Voltijds">London, United Kingdom · Full-time</span></div>
-        <p class="exp-desc"><span class="t" data-en="Regional Services Design Specialist for the P&amp;G account within Integrated Facilities Management. Structured communication workflows, translated operational requirements into clear materials, and unified brand experience across diverse regional clusters." data-nl="Regional Services Design Specialist voor het P&amp;G-account binnen Integrated Facilities Management. Communicatieworkflows gestructureerd, operationele vereisten vertaald naar heldere materialen en de merkbeleving geünificeerd over diverse regionale clusters.">Regional Services Design Specialist for the P&amp;G account within Integrated Facilities Management. Structured communication workflows, translated operational requirements into clear materials, and unified brand experience across diverse regional clusters.</span></p>
+        <p class="exp-desc"><span class="t" data-en="Regional Services Design Specialist for the P&amp;G account within Integrated Facilities Management. Structured communication workflows, translated operational requirements into clear materials, and unified brand experience across regional clusters Europe-wide." data-nl="Regional Services Design Specialist voor het P&amp;G-account binnen Integrated Facilities Management. Communicatieworkflows gestructureerd, operationele vereisten vertaald naar heldere materialen en de merkbeleving geünificeerd over regionale clusters in heel Europa.">Regional Services Design Specialist for the P&amp;G account within Integrated Facilities Management. Structured communication workflows, translated operational requirements into clear materials, and unified brand experience across regional clusters Europe-wide.</span></p>
         <ul class="exp-list">
           <li><span class="t" data-en="Communication templates and standardized libraries for cross-site use" data-nl="Communicatietemplates en gestandaardiseerde bibliotheken voor gebruik op meerdere locaties">Communication templates and standardized libraries for cross-site use</span></li>
           <li><span class="t" data-en="Brand guidelines alignment for facility environments" data-nl="Afstemming van merkrichtlijnen voor facilitaire omgevingen">Brand guidelines alignment for facility environments</span></li>
