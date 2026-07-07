@@ -493,23 +493,7 @@
   @media print {
     html, body { margin: 0; padding: 0; background: white; }
     .toolbar { display: none !important; }
-    /* ── ATS-safe single-column reading order for PDF ──
-       Screen stays 2-column; the exported PDF linearises to one
-       flow (summary → experience → skills → education) so that
-       applicant-tracking systems parse it top-to-bottom cleanly. */
-    .grid {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 0 !important;
-    }
-    .main { order: 1; width: 100%; }
-    .sidebar {
-      order: 2;
-      width: 100%;
-      border-right: none !important;
-      padding-right: 0 !important;
-      margin-top: 24px;
-    }
+    /* ── WYSIWYG — PDF выглядит точно как на экране (2 колонки) ── */
     .page, .page-2, .page-3 {
       margin: 0;
       box-shadow: none;
